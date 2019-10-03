@@ -1,0 +1,24 @@
+
+
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table">
+                <!--TABLA LISTA EMPEZAMOS CON EL ENCABEZADO-->
+                <div class="row header">
+                    <div class="cell" *ngFor="let col of columns">
+                        {{col}}
+                    </div>
+                </div>
+
+                <div class="row" *ngFor="let char of characters | async">
+                    <div class="cell" *ngFor="let col of columns">
+                        {{char[col]}}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
